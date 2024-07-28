@@ -1,3 +1,4 @@
+import logging
 import os
 
 from dotenv import load_dotenv
@@ -14,3 +15,10 @@ DB_HOST = os.getenv("DB_HOST")
 # API settings
 API_URL = os.getenv("API_URL")
 API_CHARACTER_URL = os.getenv("API_CHARACTER_URL")
+
+# logger
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s|%(levelname)s|%(message)s'
+)
+logger = logging.getLogger()
